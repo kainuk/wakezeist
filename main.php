@@ -25,6 +25,10 @@ function wakezeist_register_meta_boxes( $meta_boxes ) {
 				'name'   => esc_html__( 'Datum', 'wake' ),
 				'id'     => $prefix . 'date',
 				'desc'   => esc_html__( 'Wanneer is de wake (is er niets ingevuld, dan gaat het bericht over iets anders)?', 'wake' ),
+				'js_options' => [
+					'dateFormat' => 'dd-mm-yy',
+				],
+				'save_format' => 'Y-m-d',
 			],
 			[
 				'type' => 'checkbox',
